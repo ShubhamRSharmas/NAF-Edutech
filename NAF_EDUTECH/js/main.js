@@ -320,7 +320,7 @@ document.addEventListener("DOMContentLoaded", () => {
   async function getAIResponse(userMsg) {
     try {
       // We call our OWN local function URL now
-      const res = await fetch("../.netlify/functions/chat", {
+      const res = await fetch("/.netlify/functions/chat", {
         method: "POST",
         body: JSON.stringify({ message: userMsg }),
       });
