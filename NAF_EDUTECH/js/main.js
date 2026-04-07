@@ -319,25 +319,17 @@ document.addEventListener("DOMContentLoaded", () => {
   // Reply Logic
   async function getAIResponse(userMsg) {
     try {
-      const res = await fetch(
-        "https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=AIzaSyCfJWjG_yUy6ZhFTq3AHGFL24QGmH8-BDk",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            contents: [{ parts: [{ text: userMsg }] }],
-          }),
-        },
-      );
+      // We call our OWN local function URL now
+      const res = await fetch("/.netlify/functions/chat", {
+        method: "POST",
+        body: JSON.stringify({ message: userMsg }),
+      });
 
       const data = await res.json();
-
-      return data.candidates?.[0]?.content?.parts?.[0]?.text || "No response";
+      return data.reply;
     } catch (err) {
       console.error(err);
-      return "Error connecting to AI.";
+      return "Error connecting to the chat service.";
     }
   }
   // 👉 CHAT INPUT
