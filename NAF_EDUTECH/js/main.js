@@ -276,9 +276,9 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // 👉 CLICK (OPEN CHAT WINDOW)
-  botAvatar.addEventListener("click", () => {
-    chatWindow.style.display = "flex";
-  });
+  // botAvatar.addEventListener("click", () => {
+  //   chatWindow.style.display = "flex";
+  // });
 
   // 👉 AUTO MESSAGES
   const messages = [
