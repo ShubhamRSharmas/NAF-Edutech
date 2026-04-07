@@ -1,5 +1,3 @@
-const fetch = require("node-fetch");
-
 exports.handler = async (event) => {
   // Only allow POST requests
   if (event.httpMethod !== "POST") {
@@ -8,28 +6,40 @@ exports.handler = async (event) => {
 
   try {
     const { message } = JSON.parse(event.body);
-    const apiKey = process.env.GEMINI_API_KEY; // This pulls from your Netlify settings!
+    
+    // We use the variable we defined from your Netlify Environment settings
+    const apiKey = process.env.GEMINI_API_KEY; 
 
     const response = await fetch(
-      `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${AIzaSyCfJWjG_yUy6ZhFTq3AHGFL24QGmH8 - BDk}`,
+      `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${apiKey}`,
       {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           contents: [{ parts: [{ text: message }] }],
         }),
-      },
+      }
     );
 
     const data = await response.json();
-    const reply =
-      data.candidates?.[0]?.content?.parts?.[0]?.text || "No response from AI.";
+    
+    // If Google returns an error, pass it to the logs
+    if (data.error) {
+        console.error("Google API Error:", data.error);
+        return { 
+            statusCode: 500, 
+            body: JSON.stringify({ reply: "API Error: " + data.error.message }) 
+        };
+    }
+
+    const reply = data.candidates?.[0]?.content?.parts?.[0]?.text || "No response from AI.";
 
     return {
       statusCode: 200,
       body: JSON.stringify({ reply }),
     };
   } catch (error) {
+    console.error("Function Crash:", error);
     return { statusCode: 500, body: JSON.stringify({ error: error.message }) };
   }
 };
