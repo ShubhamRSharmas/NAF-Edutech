@@ -11,7 +11,7 @@ exports.handler = async (event) => {
     const apiKey = process.env.GEMINI_API_KEY; // This pulls from your Netlify settings!
 
     const response = await fetch(
-      `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${apiKey}`,
+      `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${AIzaSyCfJWjG_yUy6ZhFTq3AHGFL24QGmH8 - BDk}`,
       {
         method: "POST",
         headers: { "Content-Type": "application/json" },
