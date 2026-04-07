@@ -1,0 +1,4 @@
+[build]
+  base = "NAF_EDUTECH"
+  publish = "NAF_EDUTECH"
+  functions = "NAF_EDUTECH/netlify/functions"
