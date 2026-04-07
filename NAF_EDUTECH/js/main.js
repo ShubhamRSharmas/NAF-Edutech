@@ -319,16 +319,23 @@ document.addEventListener("DOMContentLoaded", () => {
   // Reply Logic
   async function getAIResponse(userMsg) {
     try {
-      // We call our OWN local function URL now
       const res = await fetch("/.netlify/functions/chat", {
         method: "POST",
+        headers: { "Content-Type": "application/json" }, // Add this header
         body: JSON.stringify({ message: userMsg }),
       });
 
+      // CHECK: Did the server actually return a 200 OK?
+      if (!res.ok) {
+        const errorText = await res.text();
+        console.error("Server Error:", errorText);
+        return "Server is having trouble. Check logs.";
+      }
+
       const data = await res.json();
-      return data.reply;
+      return data.reply || "No response from AI.";
     } catch (err) {
-      console.error(err);
+      console.error("Fetch Error:", err);
       return "Error connecting to the chat service.";
     }
   }
