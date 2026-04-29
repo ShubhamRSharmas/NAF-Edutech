@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Our Story | NAF Edutech</title>
+    <style>
+      /* Dedicated Page Styles */
+      body {
+        margin: 0;
+        background: #020617;
+      }
+
+      .history-full-page {
+        min-height: 100vh;
+        padding: 40px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .back-btn {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        color: #38bdf8;
+        text-decoration: none;
+        font-weight: 600;
+        padding: 10px 20px;
+        border: 1px solid #38bdf8;
+        border-radius: 8px;
+        transition: 0.3s;
+      }
+
+      .back-btn:hover {
+        background: #38bdf8;
+        color: #020617;
+      }
+
+      .history-wrapper {
+        flex-direction: row; /* Keep side-by-side on desktop */
+        align-items: stretch;
+        height: auto;
+        max-width: 1200px;
+      }
+
+      /* Mobile Responsive adjustment */
+      @media (max-width: 768px) {
+        .history-wrapper {
+          flex-direction: column;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page-top-nav">
+      <a href="index.html" class="back-btn">← Back Home</a>
+    </div>
+
+    <section class="history-section history-full-page">
+      <div class="history-wrapper">
+        <div class="glass-card history-content-wrapper">
+          <h2 class="section-title" style="font-size: 2.5rem">The NAF Story</h2>
+          <div class="scrollable-text" style="font-size: 1.1rem; padding: 20px">
+            <p>
+              From a very young age, I carried a deep passion for teaching. Over
+              the years, this passion grew stronger as I gained extensive
+              industry and training experience, and I constantly searched for
+              the right opportunity to turn this dream into reality.
+            </p>
+
+            <p>
+              I have always believed that education is one of the most powerful
+              identities an individual can possess. It should never be limited
+              by age, financial background, or circumstances. Learning must be
+              accessible, inclusive, and empowering for everyone.
+            </p>
+
+            <p>
+              The journey of NAF became possible because of the guidance and
+              inspiration of my mentor—a true gentleman who not only shaped my
+              professional outlook but also inspired me to contribute
+              meaningfully to society. His values and vision played a crucial
+              role in the foundation of NAF.
+            </p>
+
+            <p>
+              <strong
+                >NAF was born with a simple yet powerful purpose: to break
+                barriers in education and create opportunities for lifelong
+                learning.</strong
+              >
+            </p>
+
+            <div
+              class="founder-quote"
+              style="
+                border-left: 3px solid #38bdf8;
+                padding-left: 15px;
+                margin-top: 20px;
+                color: #a78bfa;
+              "
+            >
+              <em
+                >"I invite you to be a part of this journey. Whether you are
+                here to learn or to collaborate, your presence strengthens the
+                NAF mission."</em
+              >
+            </div>
+          </div>
+        </div>
+
+        <div class="glass-card logo-section" style="padding: 40px">
+          <img
+            src="images/NAF logo.png"
+            alt="NAF Edutech Logo"
+            class="naf-logo"
+            style="max-width: 100%"
+          />
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

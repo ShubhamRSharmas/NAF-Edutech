@@ -208,72 +208,72 @@ document.addEventListener("DOMContentLoaded", () => {
   }, 4000);
 
   // 👉 SCROLL
-  window.addEventListener("scroll", () => {
-    const scrollY = window.scrollY;
+  // window.addEventListener("scroll", () => {
+  //   const scrollY = window.scrollY;
 
-    bot.classList.add("move");
+  //   bot.classList.add("move");
 
-    if (Math.abs(scrollY - lastSwitch) > 500) {
-      lastSwitch = scrollY;
+  //   if (Math.abs(scrollY - lastSwitch) > 500) {
+  //     lastSwitch = scrollY;
 
-      bot.classList.toggle("move-right");
-    }
+  //     bot.classList.toggle("move-right");
+  //   }
 
-    // adjust chatbox
-    // if (bot.classList.contains("move-right")) {
-    //   chatbox.style.left = "auto";
-    //   chatbox.style.right = "0";
-    // } else {
-    //   chatbox.style.left = "0";
-    //   chatbox.style.right = "auto";
-    // }
+  //   // adjust chatbox
+  //   // if (bot.classList.contains("move-right")) {
+  //   //   chatbox.style.left = "auto";
+  //   //   chatbox.style.right = "0";
+  //   // } else {
+  //   //   chatbox.style.left = "0";
+  //   //   chatbox.style.right = "auto";
+  //   // }
 
-    function adjustChatPosition() {
-      const botRect = bot.getBoundingClientRect();
+  //   function adjustChatPosition() {
+  //     const botRect = bot.getBoundingClientRect();
 
-      // If bot is on right half of screen → show chat on LEFT
-      if (botRect.left > window.innerWidth / 2) {
-        chatbox.style.left = "auto";
-        chatbox.style.right = "20px"; // distance from bot
-      }
-      // If bot on left → show chat on RIGHT
-      else {
-        chatbox.style.left = "20px";
-        chatbox.style.right = "auto";
-      }
-    }
+  //     // If bot is on right half of screen → show chat on LEFT
+  //     if (botRect.left > window.innerWidth / 2) {
+  //       chatbox.style.left = "auto";
+  //       chatbox.style.right = "20px"; // distance from bot
+  //     }
+  //     // If bot on left → show chat on RIGHT
+  //     else {
+  //       chatbox.style.left = "20px";
+  //       chatbox.style.right = "auto";
+  //     }
+  //   }
 
-    function keepInsideScreen() {
-      const rect = chatbox.getBoundingClientRect();
+  //   function keepInsideScreen() {
+  //     const rect = chatbox.getBoundingClientRect();
 
-      if (rect.right > window.innerWidth) {
-        chatbox.style.right = "10px";
-        chatbox.style.left = "auto";
-      }
+  //     if (rect.right > window.innerWidth) {
+  //       chatbox.style.right = "10px";
+  //       chatbox.style.left = "auto";
+  //     }
 
-      if (rect.left < 0) {
-        chatbox.style.left = "10px";
-        chatbox.style.right = "auto";
-      }
-    }
+  //     if (rect.left < 0) {
+  //       chatbox.style.left = "10px";
+  //       chatbox.style.right = "auto";
+  //     }
+  //   }
 
-    async function sendMessage() {
-      const userMsg = input.value.trim();
+  //   async function sendMessage() {
+  //     const userMsg = input.value.trim();
 
-      if (!userMsg) return;
+  //     if (!userMsg) return;
 
-      messagesDiv.innerHTML += `<div class="user-msg">${userMsg}</div>`;
-      input.value = "";
+  //     messagesDiv.innerHTML += `<div class="user-msg">${userMsg}</div>`;
+  //     input.value = "";
 
-      const reply = await getAIResponse(userMsg);
+  //     const reply = await getAIResponse(userMsg);
 
-      messagesDiv.innerHTML += `<div class="bot-msg">${reply}</div>`;
-      messagesDiv.scrollTop = messagesDiv.scrollHeight;
-    }
+  //     messagesDiv.innerHTML += `<div class="bot-msg">${reply}</div>`;
+  //     messagesDiv.scrollTop = messagesDiv.scrollHeight;
+  //   }
 
-    adjustChatPosition();
-    keepInsideScreen();
-  });
+  //   adjustChatPosition();
+  //   keepInsideScreen();
+  // });
 
   // 👉 CLICK (OPEN CHAT WINDOW)
   // botAvatar.addEventListener("click", () => {
