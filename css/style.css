@@ -20,7 +20,7 @@ html {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 body {
@@ -33,13 +33,7 @@ body {
 ========================= */
 
 .top-bar {
-  background: linear-gradient(
-    90deg,
-    #020024,
-    #090979,
-    #0f4c75,
-    #00d4ff
-  );
+  background: linear-gradient(90deg, #020024, #090979, #0f4c75, #00d4ff);
   color: #ffffff;
   display: flex;
   align-items: center;
@@ -127,7 +121,6 @@ body {
     opacity: 0;
   }
 }
-
 
 /* Responsive */
 @media (max-width: 768px) {
@@ -303,7 +296,9 @@ body {
   position: relative;
   overflow: hidden;
   box-shadow: 0 0 25px rgba(99, 102, 241, 0.5);
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
 }
 
 /* Moving star glow around button */
@@ -311,7 +306,11 @@ body {
   content: "";
   position: absolute;
   inset: -50%;
-  background: radial-gradient(circle, rgba(255,255,255,0.25), transparent 70%);
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.25),
+    transparent 70%
+  );
   animation: orbitStars 6s linear infinite;
 }
 
@@ -332,23 +331,40 @@ body {
 
 /* ANIMATIONS */
 @keyframes galaxyGlow {
-  0% { background-position: 0% }
-  100% { background-position: 200% }
+  0% {
+    background-position: 0%;
+  }
+  100% {
+    background-position: 200%;
+  }
 }
 
 @keyframes starMove {
-  from { background-position: 0 0 }
-  to { background-position: 300px 300px }
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 300px 300px;
+  }
 }
 
 @keyframes orbitStars {
-  from { transform: rotate(0deg) }
-  to { transform: rotate(360deg) }
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 @keyframes rocketFloat {
-  0%, 100% { transform: translateY(0) }
-  50% { transform: translateY(-3px) }
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-3px);
+  }
 }
 
 /* --------------------------------------------------------- */
@@ -374,7 +390,6 @@ body {
   background-repeat: repeat;
   pointer-events: none;
 }
-
 
 /* HERO CONTENT */
 .hero-content {
@@ -433,7 +448,9 @@ body {
   text-decoration: none;
   overflow: hidden;
   box-shadow: 0 0 30px rgba(99, 102, 241, 0.6);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 /* Moving glow inside button */
@@ -441,7 +458,11 @@ body {
   content: "";
   position: absolute;
   inset: -60%;
-  background: radial-gradient(circle, rgba(255,255,255,0.3), transparent 70%);
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.3),
+    transparent 70%
+  );
   animation: orbitGlow 6s linear infinite;
 }
 
@@ -455,18 +476,20 @@ body {
   padding: 14px 26px;
   border-radius: 999px;
   background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255,255,255,0.15);
+  border: 1px solid rgba(255, 255, 255, 0.15);
   color: #e5e7eb;
   text-decoration: none;
   display: inline-flex;
   align-items: center;
   gap: 10px;
   backdrop-filter: blur(6px);
-  transition: background 0.3s ease, transform 0.3s ease;
+  transition:
+    background 0.3s ease,
+    transform 0.3s ease;
 }
 
 .btn-secondary:hover {
-  background: rgba(255,255,255,0.15);
+  background: rgba(255, 255, 255, 0.15);
   transform: translateY(-2px);
 }
 
@@ -491,13 +514,22 @@ body {
 }
 
 @keyframes orbitGlow {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 @keyframes floatImage {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-12px); }
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
 }
 
 .stars-1 {
@@ -522,13 +554,19 @@ body {
 }
 
 @keyframes starsSlow {
-  to { background-position: -1000px 1000px; }
+  to {
+    background-position: -1000px 1000px;
+  }
 }
 @keyframes starsMedium {
-  to { background-position: -800px 800px; }
+  to {
+    background-position: -800px 800px;
+  }
 }
 @keyframes starsFast {
-  to { background-position: -600px 600px; }
+  to {
+    background-position: -600px 600px;
+  }
 }
 
 /* ---------------------------------------------------------------------- */
@@ -549,7 +587,8 @@ body {
   content: "";
   position: absolute;
   inset: 0;
-  background-image: radial-gradient(1px 1px at 20% 30%, white, transparent),
+  background-image:
+    radial-gradient(1px 1px at 20% 30%, white, transparent),
     radial-gradient(1px 1px at 70% 60%, white, transparent),
     radial-gradient(2px 2px at 40% 80%, white, transparent);
   background-size: 180px 180px;
@@ -604,7 +643,9 @@ body {
   border-radius: 18px;
   padding: 35px 25px;
   border: 1px solid rgba(255, 255, 255, 0.12);
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  transition:
+    transform 0.4s ease,
+    box-shadow 0.4s ease;
   animation: floatCard 6s ease-in-out infinite;
 }
 
@@ -668,7 +709,8 @@ body {
   content: "";
   position: absolute;
   inset: 0;
-  background-image: radial-gradient(1px 1px at 30% 40%, white, transparent),
+  background-image:
+    radial-gradient(1px 1px at 30% 40%, white, transparent),
     radial-gradient(2px 2px at 70% 60%, white, transparent),
     radial-gradient(1px 1px at 50% 80%, white, transparent);
   background-size: 200px 200px;
@@ -714,7 +756,9 @@ body {
   padding: 35px 25px;
   backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.12);
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  transition:
+    transform 0.4s ease,
+    box-shadow 0.4s ease;
 }
 
 .testimonial-card:hover {
@@ -748,10 +792,10 @@ body {
 
 /* Style for the emoji container */
 .emoji-icon {
-    font-size: 50px; /* Adjust size as needed */
-    margin-bottom: 15px;
-    display: block;
-    text-align: center;
+  font-size: 50px; /* Adjust size as needed */
+  margin-bottom: 15px;
+  display: block;
+  text-align: center;
 }
 
 /* =========================================================== */
@@ -857,7 +901,9 @@ body {
   color: inherit;
   border: 1px solid rgba(255, 255, 255, 0.12);
   backdrop-filter: blur(12px);
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  transition:
+    transform 0.4s ease,
+    box-shadow 0.4s ease;
 }
 
 .galaxy-card:hover {
@@ -937,11 +983,15 @@ body {
   gap: 20px;
   padding: 24px;
   border-radius: 18px;
-  background: linear-gradient(135deg, rgba(20,20,40,0.9), rgba(40,20,60,0.9));
-  border: 1px solid rgba(255,255,255,0.15);
+  background: linear-gradient(
+    135deg,
+    rgba(20, 20, 40, 0.9),
+    rgba(40, 20, 60, 0.9)
+  );
+  border: 1px solid rgba(255, 255, 255, 0.15);
   backdrop-filter: blur(10px);
   color: #fff;
-  box-shadow: 0 0 25px rgba(138,43,226,0.3);
+  box-shadow: 0 0 25px rgba(138, 43, 226, 0.3);
 }
 
 .course-text {
@@ -966,7 +1016,7 @@ body {
 .course-image img {
   width: 180px;
   border-radius: 14px;
-  box-shadow: 0 0 20px rgba(255,215,0,0.4);
+  box-shadow: 0 0 20px rgba(255, 215, 0, 0.4);
 }
 
 .explore-btn {
@@ -986,22 +1036,17 @@ body {
   position: relative;
   padding: 100px 20px;
   background:
-  radial-gradient(
-    circle at 20% 10%,
-    rgba(88, 28, 135, 0.18),
-    transparent 45%
-  ),
-  radial-gradient(
-    circle at 80% 80%,
-    rgba(37, 99, 235, 0.12),
-    transparent 50%
-  ),
-  linear-gradient(
-    180deg,
-    #020617 0%,
-    #050816 60%,
-    #020617 100%
-  );
+    radial-gradient(
+      circle at 20% 10%,
+      rgba(88, 28, 135, 0.18),
+      transparent 45%
+    ),
+    radial-gradient(
+      circle at 80% 80%,
+      rgba(37, 99, 235, 0.12),
+      transparent 50%
+    ),
+    linear-gradient(180deg, #020617 0%, #050816 60%, #020617 100%);
   overflow: hidden;
 }
 
@@ -1013,11 +1058,7 @@ body {
   left: 0;
   width: 100%;
   height: 80px;
-  background: linear-gradient(
-    to bottom,
-    rgba(2, 6, 23, 1),
-    rgba(2, 6, 23, 0)
-  );
+  background: linear-gradient(to bottom, rgba(2, 6, 23, 1), rgba(2, 6, 23, 0));
   pointer-events: none;
   z-index: 1;
 }
@@ -1057,7 +1098,9 @@ body {
   border-radius: 20px;
   padding: 35px 25px;
   border: 1px solid rgba(255, 255, 255, 0.15);
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  transition:
+    transform 0.4s ease,
+    box-shadow 0.4s ease;
   position: relative;
 }
 
@@ -1136,11 +1179,8 @@ body {
 .why {
   position: relative;
   padding: 100px 40px;
-  background: radial-gradient(
-      circle at top,
-      rgba(124, 58, 237, 0.25),
-      transparent 40%
-    ),
+  background:
+    radial-gradient(circle at top, rgba(124, 58, 237, 0.25), transparent 40%),
     linear-gradient(135deg, #020617, #0b102a, #020617);
   color: #e5e7eb;
   overflow: hidden;
@@ -1195,7 +1235,6 @@ body {
   font-size: 0.9rem;
   backdrop-filter: blur(10px);
 }
-
 
 /* CARDS */
 .why-card {
@@ -1327,7 +1366,6 @@ body {
   color: #e5e7eb;
 }
 
-
 /* ============================================================= */
 /* CONTACT */
 .contact {
@@ -1412,7 +1450,9 @@ body {
   font-size: 0.9rem;
   color: #94a3b8;
   text-decoration: none;
-  transition: color 0.3s ease, transform 0.3s ease;
+  transition:
+    color 0.3s ease,
+    transform 0.3s ease;
 }
 
 .footer-links a:hover {
@@ -1447,7 +1487,9 @@ body {
   align-items: center;
   justify-content: center;
   color: #e5e7eb;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 .footer-social a:hover {
@@ -1475,7 +1517,6 @@ body {
     justify-content: center;
   }
 }
-
 
 /* CHAT */
 .chat-btn {
@@ -1508,11 +1549,7 @@ body {
 .about {
   position: relative;
   padding: 120px 20px;
-  background: radial-gradient(
-    circle at top,
-    #1e1b4b,
-    #020617 70%
-  );
+  background: radial-gradient(circle at top, #1e1b4b, #020617 70%);
   color: #e5e7eb;
   overflow: hidden;
 }
@@ -1666,11 +1703,7 @@ body {
 .contact {
   position: relative;
   padding: 120px 20px;
-  background: radial-gradient(
-    circle at bottom,
-    #1e1b4b,
-    #020617 75%
-  );
+  background: radial-gradient(circle at bottom, #1e1b4b, #020617 75%);
   color: #e5e7eb;
   overflow: hidden;
 }
@@ -1806,7 +1839,9 @@ body {
   border: none;
   cursor: pointer;
   box-shadow: 0 0 30px rgba(124, 58, 237, 0.6);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 .btn-galaxy:hover {
@@ -1863,17 +1898,22 @@ body {
   overflow-wrap: break-word;
 }
 
-#bot-avatar img{
-width:70px;
-height:auto;
-animation: float 3s ease-in-out infinite;
-pointer-events: auto;
-cursor: pointer;
+#bot-avatar img {
+  width: 70px;
+  height: auto;
+  animation: float 3s ease-in-out infinite;
+  pointer-events: auto;
+  cursor: pointer;
 }
 
 @keyframes float {
-  0%,100% { transform: translateY(0); }
-  50% { transform: translateY(-10px); }
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
 }
 
 /* CHATBOT */
@@ -1891,7 +1931,7 @@ cursor: pointer;
   display: none;
   flex-direction: column;
   z-index: 10001;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
 }
 
 .chat-header {
@@ -1992,31 +2032,31 @@ cursor: pointer;
 
 /* Container for the button to create space */
 .page-top-nav {
-    padding: 20px;
-    background: #020617; /* Matches your background */
-    width: 100%;
+  padding: 20px;
+  background: #020617; /* Matches your background */
+  width: 100%;
 }
 
 /* Remove 'absolute' positioning from the button */
 .back-btn {
-    display: inline-block;
-    color: #38bdf8;
-    text-decoration: none;
-    font-weight: 600;
-    padding: 10px 20px;
-    border: 1px solid #38bdf8;
-    border-radius: 8px;
-    transition: 0.3s;
+  display: inline-block;
+  color: #38bdf8;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 10px 20px;
+  border: 1px solid #38bdf8;
+  border-radius: 8px;
+  transition: 0.3s;
 }
 
-.back-btn:hover { 
-    background: #38bdf8; 
-    color: #020617; 
+.back-btn:hover {
+  background: #38bdf8;
+  color: #020617;
 }
 
 /* Ensure the section isn't forced too high */
 .history-full-page {
-    padding-top: 20px; /* Adjust as needed */
+  padding-top: 20px; /* Adjust as needed */
 }
 
 .history-wrapper {
@@ -2089,160 +2129,166 @@ cursor: pointer;
 
 /* 1. Page Layout & Background */
 .corporate-page-wrapper {
-    min-height: 100vh;
-    background: radial-gradient(circle at bottom, #020617, #0f172a);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 40px 20px;
+  min-height: 100vh;
+  background: radial-gradient(circle at bottom, #020617, #0f172a);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
 }
 
 /* 2. Top Navigation (Back Button Area) */
 .page-top-nav {
-    width: 100%;
-    max-width: 1000px;
-    margin-bottom: 20px;
-    display: flex;
-    justify-content: flex-start;
+  width: 100%;
+  max-width: 1000px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: flex-start;
 }
 
 .back-btn {
-    display: inline-block;
-    color: #38bdf8;
-    text-decoration: none;
-    font-weight: 600;
-    padding: 10px 20px;
-    border: 1px solid #38bdf8;
-    border-radius: 8px;
-    transition: all 0.3s ease;
-    background: rgba(56, 189, 248, 0.05);
+  display: inline-block;
+  color: #38bdf8;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 10px 20px;
+  border: 1px solid #38bdf8;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  background: rgba(56, 189, 248, 0.05);
 }
 
 .back-btn:hover {
-    background: #38bdf8;
-    color: #020617;
-    box-shadow: 0 0 15px rgba(56, 189, 248, 0.4);
+  background: #38bdf8;
+  color: #020617;
+  box-shadow: 0 0 15px rgba(56, 189, 248, 0.4);
 }
 
 /* 3. Main Glassmorphism Container */
 .corporate-glass-container {
-    max-width: 1000px;
-    width: 100%;
-    background: rgba(255, 255, 255, 0.03);
-    backdrop-filter: blur(15px);
-    -webkit-backdrop-filter: blur(15px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 24px;
-    padding: 50px;
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+  max-width: 1000px;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 24px;
+  padding: 50px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
 }
 
 /* 4. Typography & Headers */
 .corporate-header {
-    text-align: center;
-    margin-bottom: 40px;
+  text-align: center;
+  margin-bottom: 40px;
 }
 
 .corporate-header h1 {
-    font-size: clamp(2rem, 5vw, 3rem);
-    margin-bottom: 20px;
-    background: linear-gradient(90deg, #38bdf8, #a78bfa, #f472b6);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+  font-size: clamp(2rem, 5vw, 3rem);
+  margin-bottom: 20px;
+  background: linear-gradient(90deg, #38bdf8, #a78bfa, #f472b6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .corporate-header p {
-    font-size: 1.15rem;
-    color: #cbd5f5;
-    line-height: 1.7;
-    max-width: 800px;
-    margin: 0 auto;
+  font-size: 1.15rem;
+  color: #cbd5f5;
+  line-height: 1.7;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 /* 5. Offering Cards (Grid) */
 .corporate-offerings {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 25px;
-    margin: 40px 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  margin: 40px 0;
 }
 
 .offering-item {
-    background: rgba(255, 255, 255, 0.04);
-    padding: 30px;
-    border-radius: 15px;
-    border: 1px solid rgba(255, 255, 255, 0.05);
-    border-left: 4px solid #38bdf8;
-    transition: transform 0.3s ease, background 0.3s ease;
+  background: rgba(255, 255, 255, 0.04);
+  padding: 30px;
+  border-radius: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-left: 4px solid #38bdf8;
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease;
 }
 
 .offering-item:hover {
-    transform: translateY(-8px);
-    background: rgba(255, 255, 255, 0.07);
-    border-color: rgba(56, 189, 248, 0.4);
+  transform: translateY(-8px);
+  background: rgba(255, 255, 255, 0.07);
+  border-color: rgba(56, 189, 248, 0.4);
 }
 
 .offering-item h3 {
-    color: #38bdf8;
-    margin-bottom: 12px;
-    font-size: 1.35rem;
+  color: #38bdf8;
+  margin-bottom: 12px;
+  font-size: 1.35rem;
 }
 
 .offering-item p {
-    color: #94a3b8;
-    font-size: 0.95rem;
-    line-height: 1.6;
+  color: #94a3b8;
+  font-size: 0.95rem;
+  line-height: 1.6;
 }
 
 /* 6. Call to Action (Contact Section) */
 .corporate-cta {
-    margin-top: 40px;
-    padding: 40px;
-    background: linear-gradient(135deg, rgba(56, 189, 248, 0.08), rgba(167, 139, 250, 0.08));
-    border-radius: 20px;
-    text-align: center;
-    border: 1px solid rgba(56, 189, 248, 0.2);
+  margin-top: 40px;
+  padding: 40px;
+  background: linear-gradient(
+    135deg,
+    rgba(56, 189, 248, 0.08),
+    rgba(167, 139, 250, 0.08)
+  );
+  border-radius: 20px;
+  text-align: center;
+  border: 1px solid rgba(56, 189, 248, 0.2);
 }
 
 .corporate-cta h2 {
-    color: #fff;
-    margin-bottom: 10px;
-    font-size: 1.8rem;
+  color: #fff;
+  margin-bottom: 10px;
+  font-size: 1.8rem;
 }
 
 .corporate-cta p {
-    color: #cbd5f5;
-    margin-bottom: 20px;
+  color: #cbd5f5;
+  margin-bottom: 20px;
 }
 
 .corporate-email {
-    display: inline-block;
-    font-size: 1.4rem;
-    color: #38bdf8;
-    text-decoration: none;
-    font-weight: 700;
-    padding: 5px 10px;
-    border-bottom: 2px solid transparent;
-    transition: all 0.3s ease;
+  display: inline-block;
+  font-size: 1.4rem;
+  color: #38bdf8;
+  text-decoration: none;
+  font-weight: 700;
+  padding: 5px 10px;
+  border-bottom: 2px solid transparent;
+  transition: all 0.3s ease;
 }
 
 .corporate-email:hover {
-    color: #a78bfa;
-    border-bottom: 2px solid #a78bfa;
-    text-shadow: 0 0 10px rgba(167, 139, 250, 0.5);
+  color: #a78bfa;
+  border-bottom: 2px solid #a78bfa;
+  text-shadow: 0 0 10px rgba(167, 139, 250, 0.5);
 }
 
 /* 7. Responsive Fixes */
 @media (max-width: 768px) {
-    .corporate-glass-container {
-        padding: 30px 20px;
-    }
-    
-    .corporate-header h1 {
-        font-size: 2.2rem;
-    }
+  .corporate-glass-container {
+    padding: 30px 20px;
+  }
 
-    .corporate-email {
-        font-size: 1.1rem;
-    }
+  .corporate-header h1 {
+    font-size: 2.2rem;
+  }
+
+  .corporate-email {
+    font-size: 1.1rem;
+  }
 }
