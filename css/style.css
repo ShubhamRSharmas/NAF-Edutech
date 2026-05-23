@@ -978,7 +978,7 @@ body {
 }
 
 /* Spiritual Course Card */
-.spiritual-card {
+/* .spiritual-card {
   display: flex;
   gap: 20px;
   padding: 24px;
@@ -992,7 +992,7 @@ body {
   backdrop-filter: blur(10px);
   color: #fff;
   box-shadow: 0 0 25px rgba(138, 43, 226, 0.3);
-}
+} */
 
 .course-text {
   flex: 1;
@@ -1027,6 +1027,41 @@ body {
   background: linear-gradient(90deg, #ffcc70, #ff8177);
   cursor: pointer;
   font-weight: 600;
+}
+
+/* INTERESTED ACTION BUTTON */
+.courses-action-wrapper {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  z-index: 5;
+}
+
+.interested-btn {
+  display: inline-block;
+  padding: 14px 36px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #ffffff;
+  text-decoration: none;
+  background: linear-gradient(135deg, #6366f1, #a855f7);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50px;
+  box-shadow: 0 4px 20px rgba(99, 102, 241, 0.3);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+}
+
+.interested-btn:hover {
+  transform: translateY(-4px);
+  background: linear-gradient(135deg, #4f46e5, #9333ea);
+  box-shadow: 0 0 30px rgba(168, 85, 247, 0.6);
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+.interested-btn:active {
+  transform: translateY(-1px);
 }
 /* ======================================================= */
 
