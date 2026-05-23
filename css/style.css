@@ -1067,146 +1067,90 @@ body {
 
 /* STAFF SECTION */
 /* STAFF SECTION */
+
 .staff-section {
+  padding: 110px 20px 40px 20px; /* Kept bottom padding smaller since courses section follows */
+  background: #020617; /* Matches the top dark blend of the galaxy bg */
   position: relative;
-  padding: 100px 20px;
-  background:
-    radial-gradient(
-      circle at 20% 10%,
-      rgba(88, 28, 135, 0.18),
-      transparent 45%
-    ),
-    radial-gradient(
-      circle at 80% 80%,
-      rgba(37, 99, 235, 0.12),
-      transparent 50%
-    ),
-    linear-gradient(180deg, #020617 0%, #050816 60%, #020617 100%);
-  overflow: hidden;
+  z-index: 2;
 }
 
-/* Continuity Overlay */
-.staff-section::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 80px;
-  background: linear-gradient(to bottom, rgba(2, 6, 23, 1), rgba(2, 6, 23, 0));
-  pointer-events: none;
-  z-index: 1;
-}
-
-/* Consistent container */
 .staff-section .container {
   max-width: 1200px;
   margin: auto;
   text-align: center;
 }
 
-/* Title consistency */
-.staff-section .section-title {
-  font-size: 2.4rem;
-  font-weight: 700;
-  color: #ffffff;
-  margin-bottom: 12px;
-}
-
-.staff-subtitle {
-  color: #c9b6ff;
-  font-size: 1rem;
-  margin-bottom: 60px;
-}
-
-/* GRID */
+/* Equal Spacing Grid Layout */
 .staff-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 40px;
+  justify-content: center;
+  margin-top: 20px;
 }
 
-/* CARD */
+/* Glassmorphic Staff Cards */
 .staff-card {
-  background: rgba(255, 255, 255, 0.07);
-  backdrop-filter: blur(12px);
-  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
   padding: 35px 25px;
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  transition:
-    transform 0.4s ease,
-    box-shadow 0.4s ease;
-  position: relative;
-}
-
-.staff-card::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  border-radius: 20px;
-  background: linear-gradient(
-    120deg,
-    transparent,
-    rgba(180, 120, 255, 0.35),
-    transparent
-  );
-  opacity: 0;
-  transition: opacity 0.4s ease;
-}
-
-.staff-card:hover::before {
-  opacity: 1;
+  backdrop-filter: blur(12px);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .staff-card:hover {
-  transform: translateY(-12px) scale(1.04);
-  box-shadow: 0 0 40px rgba(160, 80, 255, 0.45);
+  transform: translateY(-10px);
+  box-shadow: 0 15px 35px rgba(168, 85, 247, 0.2); /* Soft purple glow matching your theme */
+  border-color: rgba(255, 255, 255, 0.18);
 }
 
-/* IMAGE */
-.staff-card img {
-  width: 120px;
-  height: 120px;
-  object-fit: cover;
+/* Avatar Frame styling */
+.staff-avatar-wrapper {
+  width: 130px;
+  height: 130px;
   border-radius: 50%;
-  margin-bottom: 18px;
-  border: 3px solid rgba(190, 130, 255, 0.7);
+  padding: 4px;
+  background: linear-gradient(135deg, #38bdf8, #a855f7); /* Blue to purple theme gradient border */
+  margin-bottom: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
 }
 
-/* TEXT */
-.staff-card h3 {
-  font-size: 1.25rem;
-  color: #ffffff;
+.staff-avatar {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  background: #0f172a; /* Fallback color before images load */
+}
+
+/* Content Layout inside Card */
+.staff-info h3 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #e0e7ff;
   margin-bottom: 6px;
 }
 
-.staff-card span {
+.staff-role {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #38bdf8; /* Accent light blue color */
+  margin-bottom: 16px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.staff-info p {
   font-size: 0.95rem;
-  color: #d1b3ff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-}
-
-/* STAR PARTICLES */
-.staff-stars {
-  position: absolute;
-  inset: 0;
-  background-image: radial-gradient(white 1px, transparent 1px);
-  background-size: 90px 90px;
-  opacity: 0.08;
-  animation: staffStars 60s linear infinite;
-  pointer-events: none;
-}
-
-@keyframes staffStars {
-  from {
-    background-position: 0 0;
-  }
-  to {
-    background-position: -1000px 600px;
-  }
+  color: #ffffff !important; /* Forces pure white text */
+  line-height: 1.6;
+  margin: 0;
 }
 /* ============================================================= */
 
